@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixels Art</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header"><h1 id="title">Paleta de Cores</h1></header>
+
+    <main class="main-content">
+      <section id="color-palette">
+        <div class="color selected" id="black"></div>
+        <div class="color" id="color-2"></div>
+        <div class="color" id="color-3"></div>
+        <div class="color" id="color-4"></div>
+      </section>
+
+      <button id="button-random-color">Cores aleatórias</button>
+
+      <button id="clear-board">Limpar</button>
+
+      <div id="vqv">
+        <input type="number" id="board-size" min="1" max="50" />
+        <button id="generate-board">VQV</button>
+      </div>
+      <section id="pixel-board"></section>
+    </main>
+    <video
+      autoplay
+      muted
+      loop
+      poster="vid/poster.png"
+      class="back-ground-video"
+    >
+      <source src="vid/back-ground.mp4" />
+    </video>
+    <footer class="footer-content">
+      Conteúdo compilado por Guilherme Gatti Marinho, 2023.
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

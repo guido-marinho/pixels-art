@@ -1,0 +1,127 @@
+body {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 100vw;
+}
+
+#title {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 150px;
+  color: rgb(255, 110, 13);
+  width: 200px;
+  height: 60px;
+  font-family: "Press Start 2P", cursive;
+  background: rgba(0, 0, 0, 0.8);
+  border: solid;
+  font-size: medium;
+  border-radius: 10%;
+}
+
+#color-palette {
+  display: flex;
+  justify-content: center;
+}
+
+.color {
+  border: solid 1px;
+  background-color: white;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+#black {
+  background-color: black;
+}
+
+#button-random-color {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 20px;
+  width: 170px;
+}
+
+#clear-board {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 20px;
+  width: 170px;
+}
+
+#vqv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#board-size {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 20px;
+  width: 50px;
+}
+
+#generate-board {
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+  width: 40px;
+}
+
+#pixel-board {
+  display: flex;
+  flex-flow: row wrap;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: solid 1px;
+  text-align: center;
+  background-color: white;
+}
+
+.footer-content {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px;
+  height: 10px;
+  color: aliceblue;
+}
+
+.back-ground-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  background-size: cover;
+}
