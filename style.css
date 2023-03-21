@@ -20,7 +20,6 @@ body {
   background: rgba(0, 0, 0, 0.8);
   border: solid;
   font-size: medium;
-  border-radius: 10%;
 }
 
 #color-palette {
@@ -34,10 +33,6 @@ body {
   display: inline-block;
   width: 40px;
   height: 40px;
-}
-
-#black {
-  background-color: black;
 }
 
 #button-random-color {
@@ -76,7 +71,6 @@ body {
   display: flex;
   justify-content: center;
   top: 20px;
-  width: 50px;
 }
 
 #generate-board {
