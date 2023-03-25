@@ -89,6 +89,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   top: 50px;
+  background-color: transparent;
 }
 
 .pixel {
