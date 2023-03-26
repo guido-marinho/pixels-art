@@ -31,10 +31,20 @@ const setAndApplyRandomColor = () => {
 
 // evento que gera as cores aleatorias
 buttonRandomColor.addEventListener('click', setAndApplyRandomColor);
+
 // ativa botão vqv
 buttonVqv.addEventListener('click', () => {
   const inputVqv = document.getElementById('board-size');
-  createCellsInput(inputVqv.value);
+  if (inputVqv.value === ' ') {
+    return createCells(5);
+  }
+  if (inputVqv.value < 5) {
+    return createCells(5);
+  }
+  if (inputVqv.value > 50) {
+    return createCells(50);
+  }
+  return createCells(inputVqv.value);
 });
 
 // seleciona cor na paleta de cores
@@ -55,16 +65,18 @@ const createCells = (size) => {
   grid.style.display = 'grid';
   grid.style.gridTemplateColumns = `repeat(${size}, 40px)`;
   grid.style.gridTemplateRows = `repeat(${size}, 40px)`;
-  grid.style.border = '1px solid black';
   for (let index = 0; index < size * size; index += 1) {
     const divPixelBoard = document.createElement('div');
     divPixelBoard.className = 'pixel';
     divPixelBoard.id = index;
+    divPixelBoard.style.border = '1px solid black';
     grid.appendChild(divPixelBoard);
     divPixelBoard.style.backgroundColor = 'white';
   }
+  localStorage.setItem('boardSize', size);
 };
-createCells(10);
+createCells(localStorage.getItem('boardSize') || 5);
+localStorage.getItem('boardSize');
 
 // colore os pixel de pixel board
 const paintPixel = () => {
