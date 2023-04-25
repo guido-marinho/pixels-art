@@ -45,23 +45,17 @@ const createEmptyBoard = (size) => {
 const grid = document.getElementById("pixel-board");
 // cria grade de pixels 5x5
 const createCells = (size) => {
-  let array = [];
-  const test = localStorage.getItem("pixelBoard");
-  if (test !== null) {
-    array = JSON.parse(test);
-  } else {
-    array = createEmptyBoard(size * size);
-  }
+  grid.innerHTML = "";
+  const arrayPixel = createEmptyBoard(size * size);
+  localStorage.setItem("pixelBoard", JSON.stringify(arrayPixel));
+  grid.style.width = `${size * 42}px`;
   for (let index = 0; index < size * size; index += 1) {
-    const elem = document.createElement("div");
-    elem.className = "pixel";
-    elem.id = index;
-    grid.appendChild(elem);
-    elem.style.backgroundColor = array[index];
+    const pixel = document.createElement("div");
+    pixel.className = "pixel";
+    pixel.id = index;
+    grid.appendChild(pixel);
+    localStorage.setItem('boardSize', size);
   }
-  const gridWidth = `${Math.ceil(Math.sqrt(array.length) * 42)}px`;
-  grid.style.width = gridWidth;
-  localStorage.setItem("boardSize", size);
 };
 createCells(localStorage.getItem("boardSize") || 5);
 localStorage.getItem("boardSize");
