@@ -14,4 +14,4 @@ Contribuições são sempre bem-vindas! Caso queira contribuir com o projeto, ab
 # Licença
 Este projeto é distribuído sob a licença MIT. Consulte o arquivo LICENSE para mais informações.
 
-https://guilhermegattimarinho.github.io/pixels-art/
+<a href='https://guilhermegattimarinho.github.io/pixels-art/'> Pixels Art </a>
